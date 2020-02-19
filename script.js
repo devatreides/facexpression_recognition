@@ -9,10 +9,10 @@ function startVideo() {
 }
 
 Promise.all([
-  faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-  faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-  faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
-  faceapi.nets.faceExpressionNet.loadFromUri('/models')
+  faceapi.nets.tinyFaceDetector.loadFromUri(window.location.href+'/models'),
+  faceapi.nets.faceLandmark68Net.loadFromUri(window.location.href+'/models'),
+  faceapi.nets.faceRecognitionNet.loadFromUri(window.location.href+'/models'),
+  faceapi.nets.faceExpressionNet.loadFromUri(window.location.href+'/models')
 ]).then(startVideo)
 
 video.addEventListener('play', () => {
